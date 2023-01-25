@@ -9,7 +9,7 @@ describe("ForecastSummary", () => {
     icon: "800",
     temperature: {
       min: 12,
-      max: 20,
+      max: 22,
     },
   };
   it("renders correctly", () => {
@@ -32,11 +32,11 @@ describe("ForecastSummary", () => {
         temperature={validProps.temperature}
       />
     );
-    expect(getByText("1111111")).toHaveClass("forecast-summary__date");
+    expect(getByText("Thu Jan 01 1970")).toHaveClass("forecast-summary__date");
     expect(getByText("Stub description")).toHaveClass(
       "forecast-summary__description"
     );
-    expect(getByText("800")).toHaveClass("forecast-summary__icon");
-    expect(getByText("20°C")).toHaveClass("forecast-summary__temperature");
+    expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
+    expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");
   });
 });

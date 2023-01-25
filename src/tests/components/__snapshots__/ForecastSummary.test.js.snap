@@ -9,18 +9,21 @@ exports[`ForecastSummary renders correctly 1`] = `
     <div
       class="forecast-summary__date"
     >
-      1111111
+      Thu Jan 01 1970
     </div>
     <div
       class="forecast-summary__icon"
       data-testid="forecast-icon"
     >
-      800
+      <i
+        class="wi wi-day-sunny"
+        name="owm"
+      />
     </div>
     <div
       class="forecast-summary__temperature"
     >
-      20°C
+      22°C
     </div>
     <div
       class="forecast-summary__description"
