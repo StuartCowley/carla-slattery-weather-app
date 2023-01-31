@@ -5,9 +5,8 @@ import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 import SearchForm from "./SearchForm";
-
-import "../styles/App.css";
 import "../styles/ForecastSummaries.css";
+import "../styles/App.css";
 
 function App() {
   const [forecasts, setForecasts] = useState([]);
@@ -33,11 +32,18 @@ function App() {
   };
 
   useEffect(() => {
-    getForecast(setSelectedDate, setForecasts, setLocation);
+    getForecast(
+      setSelectedDate,
+      setForecasts,
+      setLocation,
+      setLocation,
+      setErrorMessage
+    );
   }, []);
 
   return (
-    <div className="weather-app">
+    <div className="app-container">
+      <h1>Five Day Weather Forecast</h1>
       <LocationDetails
         city={location.city}
         country={location.country}
@@ -47,6 +53,7 @@ function App() {
         searchText={searchText}
         setSearchText={setSearchText}
         onSubmit={handleCitySearch}
+        placeholder="Enter city name"
       />
       {!errorMessage && (
         <>

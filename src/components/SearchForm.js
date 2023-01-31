@@ -5,7 +5,12 @@ function SearchForm({ searchText, setSearchText, onSubmit }) {
   const handleInputChange = (event) => setSearchText(event.target.value);
   return (
     <div className="search-form">
-      <input type="text" onChange={handleInputChange} value={searchText} />
+      <input
+        type="text"
+        placeholder="Enter Location"
+        onChange={handleInputChange}
+        value={searchText}
+      />
       <button type="submit" onClick={onSubmit}>
         Search
       </button>

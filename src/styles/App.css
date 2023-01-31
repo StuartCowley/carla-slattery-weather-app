@@ -1,7 +1,82 @@
-body {
-  background-color: rgb(147, 178, 203);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.weather-app {
-  margin: 0 20px;
+body {
+  background: url(../images/szabo-viktor-28ZbKOWiZfs-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  padding: 10px;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  min-height: 300px;
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+button {
+  display: inline-block;
+  background-color: purple;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:hover {
+  background-color: blue;
+}
+
+input {
+  width: 50%;
+  height: 30px;
+  margin: 5px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+.forecast-summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-summary__date {
+  padding: 10px 5px 15px;
+  font-weight: bold;
+}
+
+.forecast-summary__icon {
+  color: white;
+  font-size: 3rem;
+}
+
+.forecast-details {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid purple;
 }
