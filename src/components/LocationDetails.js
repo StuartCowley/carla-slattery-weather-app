@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 function LocationDetails(props) {
   const { city, country, errorMessage } = props;
   return errorMessage ? (
-    <h1>errorMessage</h1>
+    <h2>errorMessage</h2>
   ) : (
-    <h1>{`${city}, ${country}`}</h1>
+    <h2>{`${city}, ${country}`}</h2>
   );
 }
 LocationDetails.defaultProps = {
