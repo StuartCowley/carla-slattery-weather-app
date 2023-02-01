@@ -33,9 +33,9 @@ function App() {
 
   useEffect(() => {
     getForecast(
+      "",
       setSelectedDate,
       setForecasts,
-      setLocation,
       setLocation,
       setErrorMessage
     );
